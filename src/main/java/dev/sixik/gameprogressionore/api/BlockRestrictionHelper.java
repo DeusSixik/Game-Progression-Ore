@@ -24,17 +24,12 @@ public class BlockRestrictionHelper {
     }
 
     public static int getReplacementBlock(BlockState block) {
-        final StageData curData = GPOChunkUtils.currentPlayerDataPacket.get();
         final int blockStateId = BlockIdGetter.get(block).gpo$getFastId();
-        if(curData == null) return blockStateId;
-
-        return BlockRestrictionData.INSTANCE
-                .getReplacementBlock(blockStateId, curData);
+        return getReplacementBlock(blockStateId);
     }
 
     public static int getReplacementBlock(BlockState block, ServerPlayer player) {
         final int blockStateId = BlockIdGetter.get(block).gpo$getFastId();
-        return BlockRestrictionData.INSTANCE
-                .getReplacementBlock(blockStateId, PlayerStageDataService.getOrCreate(player));
+        return getReplacementBlock(blockStateId, player);
     }
 }
