@@ -9,7 +9,11 @@ import org.openzen.zencode.java.ZenCodeType;
 
 @ZenRegister
 @ZenCodeType.Name("mods.gpo.api.OreStages")
-@Document("mods/gpo/api/OreStages")
+@Document(value = "mods/gameprogrssion/modules/orestages/OreStage", requiredMods = @Document.Mod(
+        modid = "game_progression_ore",
+        displayName = "Game Progression Ore",
+        url = "github.com/DeusSixik/GameProgressionOre"
+))
 public class GPOCraftTweaker {
 
     /**
