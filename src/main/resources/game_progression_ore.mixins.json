@@ -1,0 +1,30 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.sixik.gameprogressionore.impl.mixin",
+  "plugin": "dev.sixik.gameprogressionore.impl.GPOMixinPlugin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "MixinServerPlayerGameMode",
+    "accessors.ServerGamePacketListenerImplAccessor",
+    "blockstate.MixinBlockStateBase$Extension",
+    "blockstate.MixinBlockStateBase$ExtensionImpl",
+    "compat.lithium.Lithium$MixinLithiumHashPalette",
+    "packets.MixinClientboundBlockUpdatePacket",
+    "packets.MixinClientboundLevelChunkPacketData",
+    "packets.MixinClientboundSectionBlocksUpdatePacket",
+    "sending.MixinConnection",
+    "sending.MixinPlayerChunkSender$inject_player",
+    "sending.paletted.MixinHashMapPalette",
+    "sending.paletted.MixinLinearPalette",
+    "sending.paletted.MixinSingleValuePalette$redirect_sending"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}
