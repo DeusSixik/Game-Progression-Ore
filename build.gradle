@@ -124,7 +124,7 @@ dependencies {
     compileOnly(ctDep)
     runtimeOnly(ctDep)
 
-    annotationProcessor 'com.blamejared.crafttweaker:Crafttweaker_Annotation_Processors:3.0.0.10'
+    annotationProcessor 'com.blamejared.crafttweaker:Crafttweaker_Annotation_Processors:4.0.0.21'
     annotationProcessor ctDep
 
     implementation "com.github.DeusSixik:Game-Progression-Framework:${gpf_version}"
@@ -180,4 +180,8 @@ idea {
         downloadSources = true
         downloadJavadoc = true
     }
+}
+
+compileJava {
+    options.compilerArgs << ("-Acrafttweaker.processor.document.output_directory=${file('docsOut')}" as String)
 }

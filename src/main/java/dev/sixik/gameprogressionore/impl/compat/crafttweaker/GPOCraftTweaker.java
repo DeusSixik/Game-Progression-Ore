@@ -1,6 +1,7 @@
 package dev.sixik.gameprogressionore.impl.compat.crafttweaker;
 
 import com.blamejared.crafttweaker.api.annotation.ZenRegister;
+import com.blamejared.crafttweaker_annotations.annotations.Document;
 import dev.sixik.gameprogressionore.api.OreStages;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
@@ -8,6 +9,7 @@ import org.openzen.zencode.java.ZenCodeType;
 
 @ZenRegister
 @ZenCodeType.Name("mods.gpo.api.OreStages")
+@Document("mods/gpo/api/OreStages")
 public class GPOCraftTweaker {
 
     /**
@@ -160,3 +162,5 @@ public class GPOCraftTweaker {
         OreStages.addStage(stage, block, newblockState);
     }
 }
+
+
