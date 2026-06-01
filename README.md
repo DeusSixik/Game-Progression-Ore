@@ -195,7 +195,7 @@ GPFEvents.stageRegister(event => {
   event.register('bronze_age')
 })
 
-GPFEvents.stageRegisterFinalize(event => {
+GPFEvents.stageRegisterEnd(event => {
   GPOre.addStage('bronze_age', Block.getBlock('minecraft:diamond_ore'))
 })
 ```
@@ -203,7 +203,7 @@ GPFEvents.stageRegisterFinalize(event => {
 ### Example with replacement state
 
 ```js
-GPFEvents.stageRegisterFinalize(event => {
+GPFEvents.stageRegisterEnd(event => {
   GPOre.addStage(
     'bronze_age',
     Block.getBlock('minecraft:birch_leaves'),
